@@ -12,6 +12,7 @@ library(tidyverse)
 # Load source scripts
 source("./Load_reproject_crop_MODIS.R")
 source("./Extract_reclassify_rasters.R")
+source("./Get_matrix_by_year.R")
 
 # Paths and inputs
 modis_database_path = "../data/MCD12Q1/"
@@ -29,3 +30,12 @@ modis_cropped_rasters = Load_reproject_crop_MODIS(modis_database_path,
 reclassified_table = Extract_reclassify_rasters(modis_cropped_rasters,
                                                 reclass_table_path,
                                                 reclass_order_path)
+
+# Get list of years
+years = reclassified_table$Year %>% unique() %>% sort()
+
+# Get all LC matrices
+all_lc_matrices = lapply(years,
+                         function(year){
+                           Get_matrix_by_year(reclassified_table, year)})
+
