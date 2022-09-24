@@ -8,12 +8,14 @@ rm(list = ls())
 # Load the required libraries
 library(terra)
 library(tidyverse)
+library(MASS)
 
 # Load source scripts
 source("./Load_reproject_crop_MODIS.R")
 source("./Extract_reclassify_rasters.R")
 source("./Get_matrix_by_year.R")
 source("./Calculate_transition_matrix.R")
+source("./Calculate_average_transition_matrix.R")
 
 # Paths and inputs
 modis_database_path = "../data/MCD12Q1/"
@@ -47,3 +49,7 @@ all_transition_matrices =
     years[1:(length(years)-1)], 
     years[2:length(years)], 
     SIMPLIFY = FALSE)
+
+# Calculate average transition matrix
+average_transition_matrix = 
+  Calculate_average_transition_matrix(all_transition_matrices)
