@@ -14,7 +14,8 @@ Load_reproject_crop_MODIS = function(modis_database_path,
   # it is called cropped raster for clarifty purpose
   modis_cropped_rasters = lapply(modis_hdf_files, function(modis_file){
     modis_raster = rast(modis_file)[dataset_selected]
-    modis_repojected = project(modis_raster, bounding_shapefile_crs)
+    modis_repojected = 
+      project(modis_raster, bounding_shapefile_crs, method = "near")
     modis_cropped = crop(modis_repojected, bounding_shapefile, snap = "OUT")
     modis_masked = mask(modis_cropped, bounding_shapefile)
   }) %>%
