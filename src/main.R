@@ -13,6 +13,7 @@ library(tidyverse)
 source("./Load_reproject_crop_MODIS.R")
 source("./Extract_reclassify_rasters.R")
 source("./Get_matrix_by_year.R")
+source("./Calculate_transition_matrix.R")
 
 # Paths and inputs
 modis_database_path = "../data/MCD12Q1/"
@@ -39,3 +40,10 @@ all_lc_matrices = lapply(years,
                          function(year){
                            Get_matrix_by_year(reclassified_table, year)})
 
+# Calculate all transition matrices
+all_transition_matrices = 
+  mapply(
+    function(a, b){Calculate_transition_matrix(reclassified_table, a, b)},
+    years[1:(length(years)-1)], 
+    years[2:length(years)], 
+    SIMPLIFY = FALSE)
