@@ -32,6 +32,48 @@ plot(modis_cropped_rasters[[1]])
 
 ![image](https://user-images.githubusercontent.com/16074044/192771316-69465a4c-da2b-452d-abba-18915896d315.png)
 
+Figure 2 Example MODIS “LC_Type1” dataset (a) loaded and reprojected into example boundary’s coordinate system, (b) MODIS dataset after reprojection and cropping using the example boundary
+
+The reclassification _table.csv also can made as needed.
+
+Table 1 Example land cover mapping reclassification supplied as an input file
+|---------|----------|
+|LC_index | LC_class |
+|---------|----------|
+|    1    | 	Forest  |
+|    2    | 	Forest  |
+|    4	   |  Forest  |
+|    5    |	 Forest  |
+|    6    |Agriculture|
+|    7    |	Agriculture|
+|    8    |	Forest|
+|    9    |	Forest|
+|   10    |	Agriculture |
+|   11    |	Agriculture|
+|   12    |	Agriculture|
+|   13    |	Developed|
+|   14    |	Agriculture|
+|   15    |	NA|
+|   15    |	NA|
+|   15    |	NA|
+|   16    |	NA|
+|   17    |	NA|
+|---------|----------|
+
+Classification_factor_order.csv define how the order of such land cover categorical classifications should henceforth be shown.
+After all the inputs ready, the software can run. 
+The results is yearly transition matrix of the MODIS data that normalized already.
+
+![image](https://user-images.githubusercontent.com/16074044/192802160-ed255e3c-f106-43ff-9196-f734cf42a78a.png)
+
+Figure 3 Example calculation results (a) example land cover reclassified table, (b) example land cover matrix, and (c) example average transition matrix\\
+
+The transition matrix can be apply to predict future land cover. The simplest model is using Markov
+X(t+c) = X(t) * B^c
+Where t is the initial year, c is the gap year, and B is the average transition matrix from the model. 
+Further, the yearly transition matrix now ready to apply to another sophisticated model.
+
+
 
 
 
