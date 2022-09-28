@@ -66,12 +66,12 @@ The results is normalized yearly transition matrix of the MODIS data.
 
 ![image](https://user-images.githubusercontent.com/16074044/192802160-ed255e3c-f106-43ff-9196-f734cf42a78a.png)
 
-Figure 3 Example calculation results (a) example land cover reclassified table, (b) example land cover matrix, and (c) example average transition matrix\\
+Figure 3 Example calculation results (a) example land cover reclassified table, (b) example land cover matrix, and (c) example average transition matrix
 
 The transition matrix can be apply to predict future land cover.
 The simplest model is using Markov:
 
-X(t+c) = X(t) * B^c
+X(t+c) = X(t) * B^c 
 
 Where t is the initial year, c is the gap year, and B is the average transition matrix from the model. 
 Further, the yearly transition matrix now ready to apply to another sophisticated model.
