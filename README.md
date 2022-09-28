@@ -26,9 +26,11 @@ First of all you have to create some folders (into the “code” folder):
   -	reclassification_table.csv
 -	Code folder: # src
 
-The MODIS file can be change depends on the study area as well as the boundary area.
-The reclassification _table.csv also can made as needed.
-Classification_factor_order.csv define how the order of such land cover categorical classifications should henceforth be shown.
+The MODIS file can be change depends on the study area as well as the boundary area. \\
+To check if the MODIS data clipped properly\\
+plot(modis_cropped_rasters[[1]]) \\
+
+![image](https://user-images.githubusercontent.com/16074044/192771316-69465a4c-da2b-452d-abba-18915896d315.png)
 
 
 
