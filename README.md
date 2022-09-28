@@ -14,17 +14,18 @@ To use the software run markov_lulc.Rproj
 The code has been written in R. You can easly install the R studio and open the file .Rproj from the folder to set the environment.
 The R studio download link; https://www.rstudio.com/products/rstudio/
 Then  install the following packages by running:
-•	Terra
-•	Tidyverse
-•	MASS
+- Terra
+- Tidyverse
+- MASS
 
 First of all you have to create some folders (into the “code” folder):
-•Data folder: # data
-o	example_bound: contains shapefile
-o	MCD12Q1 : contains raw MODIS file .hdf
-o	classification_factor_order.csv
-o	reclassification_table.csv
-•	Code folder: #src
+- Data folder: # data
+  - example_bound: contains shapefile
+  - MCD12Q1 : contains raw MODIS file .hdf
+  -	classification_factor_order.csv
+  -	reclassification_table.csv
+-	Code folder: # src
+
 The MODIS file can be change depends on the study area as well as the boundary area.
 The reclassification _table.csv also can made as needed.
 Classification_factor_order.csv define how the order of such land cover categorical classifications should henceforth be shown.
