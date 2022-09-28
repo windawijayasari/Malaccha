@@ -8,7 +8,7 @@ This tool has been designed to make probability transition matrix in a simple an
 The software is separated into six script files, i.e., the main script and five other scripts that constitute the five subprocesses in the entire process: MODIS dataset loader, MODIS rasters extraction and reclassification, annual transition matrix calculator function, the dataset to transition matrices extractor, and average transition matrix calculator.
 
 # USER MANUAL
-To run the software example case study, open \* markov_lulc.Rproj *\ in the folder src then run \* main.R. *\ Then, to use users case or files, the users can change the associated paths.
+To run the software example case study, open **markov_lulc.Rproj**  in the folder src then run **main.R.** Then, to use users case or files, the users can change the associated paths.
 
 # Required packages
 The code has been written in R. You can easly install the R studio and open the file .Rproj from the folder to set the environment.
