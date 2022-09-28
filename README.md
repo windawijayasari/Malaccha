@@ -37,7 +37,7 @@ Figure 2 Example MODIS “LC_Type1” dataset (a) loaded and reprojected into ex
 The reclassification _table.csv also can made as needed.
 
 Table 1 Example land cover mapping reclassification supplied as an input file
-|---------|----------|
+
 |LC_index | LC_class |
 |---------|----------|
 |    1    | 	Forest  |
@@ -58,17 +58,19 @@ Table 1 Example land cover mapping reclassification supplied as an input file
 |   15    |	NA|
 |   16    |	NA|
 |   17    |	NA|
-|---------|----------|
+
 
 Classification_factor_order.csv define how the order of such land cover categorical classifications should henceforth be shown.
 After all the inputs ready, the software can run. 
-The results is yearly transition matrix of the MODIS data that normalized already.
+The results is normalized yearly transition matrix of the MODIS data.
 
 ![image](https://user-images.githubusercontent.com/16074044/192802160-ed255e3c-f106-43ff-9196-f734cf42a78a.png)
 
 Figure 3 Example calculation results (a) example land cover reclassified table, (b) example land cover matrix, and (c) example average transition matrix\\
 
-The transition matrix can be apply to predict future land cover. The simplest model is using Markov
+The transition matrix can be apply to predict future land cover.
+The simplest model is using Markov:
+
 X(t+c) = X(t) * B^c
 Where t is the initial year, c is the gap year, and B is the average transition matrix from the model. 
 Further, the yearly transition matrix now ready to apply to another sophisticated model.
