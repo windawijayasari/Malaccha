@@ -18,7 +18,18 @@ Then  install the following packages by running:
 •	Tidyverse
 •	MASS
 
-# Inputs to prepare
+First of all you have to create some folders (into the “code” folder):
+•Data folder: # data
+o	example_bound: contains shapefile
+o	MCD12Q1 : contains raw MODIS file .hdf
+o	classification_factor_order.csv
+o	reclassification_table.csv
+•	Code folder: #src
+The MODIS file can be change depends on the study area as well as the boundary area.
+The reclassification _table.csv also can made as needed.
+Classification_factor_order.csv define how the order of such land cover categorical classifications should henceforth be shown.
+
+
 
 
 
