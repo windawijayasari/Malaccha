@@ -71,7 +71,7 @@ Figure 3 Example calculation results (a) example land cover reclassified table, 
 The transition matrix can be apply to predict future land cover.
 The simplest model is using Markov:
 
-X(t+c) = X(t) * B^c 
+$X(t+c) = X(t) \ B^c$ 
 
 Where t is the initial year, c is the gap year, and B is the average transition matrix from the model. 
 Further, the yearly transition matrix now ready to apply to another sophisticated model.
