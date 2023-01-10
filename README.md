@@ -1,7 +1,7 @@
 # Markov-land-cover-extraction
 
 # Description
-This tool has been designed to make probability transition matrix in a simple and automatic way. Some inputs need to prepare before run the software are MODIS .hdf database, dataset string (type of the MODIS product), boundary shapefile (.shp), reclassification table (.csv), and classes order (.csv). The flowchart for the presented software is presented below.
+This tool has been designed to make probability transition matrix in a simple and automatic way named Malaccha (Mrkovian Land Cover Change). Some inputs need to prepare before run the software are MODIS .hdf database, dataset string (type of the MODIS product), boundary shapefile (.shp), reclassification table (.csv), and classes order (.csv). The flowchart for the presented software is presented below.
 
  ![image](https://user-images.githubusercontent.com/16074044/192727445-5177eb14-da33-415a-98d6-dd61dc15db3b.png)
 
